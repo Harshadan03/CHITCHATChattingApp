@@ -12,7 +12,7 @@ const  {getUser, getUsersInRoom, addUser, removeUser} = require('./utils/users')
 const server = http.createServer(app)
 
 const io = socketIo(server)
-const port = 7000
+const port = process.env.PORT || 7000
 
 const publicDirectory = path.join(__dirname,"../public")
 
